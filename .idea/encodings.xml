@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/browserDrivers/chromedriver.exe" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/browserDrivers/geckodriver.exe" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/libSelenium/selenium-server-4.21.0.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/libSelenium/selenium-support-4.22.0-sources.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/libSelenium/testng-7.10.2.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/testcases/account/Account_register.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/uploadFiles" charset="windows-1252" />
+  </component>
+</project>
