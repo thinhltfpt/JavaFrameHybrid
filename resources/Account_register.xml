@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="nopCommmerce" parallel="false">
+<suite name="nopCommmerce">
     <test verbose="1" preserve-order="true"
           name="run on Firefox">
         <classes>
             <class name="account.Account_register">
-                <methods>
-                    <include name="Register_01_EmptyData"/>
-                    <include name="Register_02_Invalid_Email"/>
-                    <include name="Register_03_Invalid_Pass"/>
-                    <include name="Register_04_Incorrect_Confirm_Pass"/>
-                    <include name="Register_05_Success"/>
-                </methods>
             </class>
         </classes>
     </test>
