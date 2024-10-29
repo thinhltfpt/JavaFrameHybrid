@@ -279,23 +279,23 @@ public class BasePage {
      *  Wait
      * */
     public void waitForElementVisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
     }
 
     public void waitForListElementVisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfAllElements(getListWebElement(driver, locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfAllElements(getListWebElement(driver, locator)));
     }
 
     public void waitForElementInvisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
     }
 
     public void waitForListElementInvisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver, locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver, locator)));
     }
 
     public void waitForElementClickable(WebDriver driver, String locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver, locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver, locator)));
     }
 
 

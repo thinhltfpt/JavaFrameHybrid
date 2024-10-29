@@ -25,5 +25,11 @@ public class HomePageUI {
     * */
 
     // field/ bien'
-    public static final String ABOUT_US_LINK = "";
+//    public static final String ABOUT_US_LINK = "//div[@class='sui-display-none___JJyjC sui-display-md-block___bfij1 sui-col___xXTZD sui-col-12___cgLQS sui-col-sm-12___AJXmh sui-col-md-3___fj0of sui-col-responsive___1C9c8']//nav[@aria-label='Company']//a[text()='About Us']";
+    public static final String ABOUT_US_LINK = "//div[@class='sui-search-input__children___HmvCs']/a";
+    public static final String AUDI_LINK = "";
+    public static final String AMG_LINK = "";
+
+
+
 }

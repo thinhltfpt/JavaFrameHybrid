@@ -1,4 +1,4 @@
 package pageUIs.nopCommerce;
 
-public class RegisterPageUI {
+public class AudiPageUI {
 }

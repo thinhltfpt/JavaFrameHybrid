@@ -1,4 +1,4 @@
 package pageObjects.nopCommerce;
 
-public class RegisterPageObject {
+public class AudiPageObject {
 }
