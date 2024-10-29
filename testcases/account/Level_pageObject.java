@@ -3,6 +3,7 @@ package account;
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -16,7 +17,7 @@ import java.time.Duration;
 
 public class Level_pageObject extends BasePage {
     private WebDriver driver;
-    private  HomePageObject homePageObj;
+    private HomePageObject homePageObj;
     private AudiPageObject AudiPage;
     private AMGPageObject AMGPage;
     private AboutUSPageObject aboutUSPage;
@@ -26,7 +27,7 @@ public class Level_pageObject extends BasePage {
         driver = new FirefoxDriver();
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
-//        driver.get("");
+        driver.get("https://www.sytner.co.uk/");
 
         // mo 1 URL ra - no o page nao` -> khoi tao page do
         // tu` 1 page nao chuyen qua page kia -> khoi tao page do len
@@ -35,20 +36,21 @@ public class Level_pageObject extends BasePage {
 
     @Test
     public void TC_01_move_to_aboutUs_page() {
-        openPageURL(driver,"https://www.sytner.co.uk/");
         sleepInSeconds(2);
-        clickToElement(driver,"//button[@id='onetrust-accept-btn-handler']");
-//        sleepInSeconds(2);
-//        scrollToBottomPageByJS(driver);
-        homePageObj.clickToAboutUsLink();
-//        aboutUSPage = new AboutUSPageObject();
-//        aboutUSPage.clickToLogo();
+        // click accept cookie
+        clickToElement(driver, "//button[@id='onetrust-accept-btn-handler']");
+
     }
 
     @Test
-    public void TC_02_openMenu(){
-        homePageObj.clickToMenuButton();
-        homePageObj.clickToCloseMenuButton();
+    public void TC_02_openMenu() {
+        sleepInSeconds(3);
+        // click accept cookie
+        clickToElement(driver, "//button[@id='onetrust-accept-btn-handler']");
+        Assert.assertEquals(homePageObj.getTextTheUltimate(), "The ultimate destination for luxury and performance cars");
+        homePageObj.clickToSearchLink();
+
+
     }
 
     @AfterClass

@@ -25,4 +25,14 @@ public class HomePageObject extends BasePage   {
 
     public void clickToCloseMenuButton() {
     }
+
+    public String getTextTheUltimate() {
+        waitForElementVisible(driver,HomePageUI.theUltimate);
+        return getElementText(driver,HomePageUI.theUltimate);
+    }
+
+    public void clickToSearchLink() {
+        waitForElementVisible(driver,HomePageUI.SEARCH_BY_LINK);
+        clickToElement(driver,HomePageUI.SEARCH_BY_LINK);
+    }
 }
