@@ -2,28 +2,45 @@ package account;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.nopCommerce.AMGPageObject;
 import pageObjects.nopCommerce.AboutUSPageObject;
 import pageObjects.nopCommerce.AudiPageObject;
 import pageObjects.nopCommerce.HomePageObject;
-import pageUIs.nopCommerce.HomePageUI;
 
-import java.time.Duration;
-
-public class Level_pageObject extends BasePage {
+public class HomePage extends BasePage {
     private WebDriver driver;
     private HomePageObject homePageObj;
     private AudiPageObject AudiPage;
     private AMGPageObject AMGPage;
     private AboutUSPageObject aboutUSPage;
 
+    // multi browser
+    @Parameters("browser")  // denpendencies injection
     @BeforeClass
-    public void beforeClass() {
+    public void beforeClass(String browser) {
+        // == thi` kiem tra gia tri
+        // equal thi` kiem tra vung` nho' (String dun`g)
+        // equal: dung' value - dung' hoa thuong`
+        // equalIgnoreCase: dung' value - ko kiem tra hoa thuong
+        if (browser.equalsIgnoreCase("firefox")) {
+            driver = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("chrome")) {
+            driver = new ChromeDriver();
+        } else if (browser.equalsIgnoreCase("edge")) {
+            driver = new EdgeDriver();
+        } else {
+            throw new RuntimeException("browser invalid");
+        }
+
+
         driver = new FirefoxDriver();
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
@@ -49,7 +66,6 @@ public class Level_pageObject extends BasePage {
         clickToElement(driver, "//button[@id='onetrust-accept-btn-handler']");
         Assert.assertEquals(homePageObj.getTextTheUltimate(), "The ultimate destination for luxury and performance cars");
         homePageObj.clickToSearchLink();
-
 
     }
 
