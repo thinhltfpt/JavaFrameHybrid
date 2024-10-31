@@ -298,6 +298,9 @@ public class BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver, locator)));
     }
 
+    public void waitForTextVisible(WebDriver driver, String locator, String textExpect) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.textToBePresentInElementLocated(getByXpath(locator),textExpect));
+    }
 
     // Java Excuter
     public void hightlightElement(WebDriver driver, String locator) {

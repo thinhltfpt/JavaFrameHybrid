@@ -19,33 +19,31 @@ public class BaseTest {
         // equal thi` kiem tra vung` nho' (String dun`g)
         // equal: dung' value - dung' hoa thuong`
         // equalIgnoreCase: dung' value - ko kiem tra hoa thuong
+
+        String os = System.getProperty("os.name").toLowerCase();
         BrowserList browserList = BrowserList.valueOf(browser.toUpperCase());
-        if (browserList == BrowserList.FIREFOX) {
-            driver = new FirefoxDriver();
-        } else if (browserList == BrowserList.CHROME) {
-            driver = new ChromeDriver();
-        } else if (browserList == BrowserList.EDGE) {
-            driver = new EdgeDriver();
-        } else {
-            throw new RuntimeException("browser invalid");
-        }
-
-//        switch (browser) {
-//            case "FIREFOX":
-//                driver = new FirefoxDriver();
-//                break;
-//            case "CHROME":
-//                driver = new ChromeDriver();
-//                break;
-//            case "EDGE":
-//                driver = new EdgeDriver();
-//                break;
-//            default:
-//                throw new RuntimeException("Browser invalid");
+//        if (browserList == BrowserList.FIREFOX) {
+//            driver = new FirefoxDriver();
+//        } else if (browserList == BrowserList.CHROME) {
+//            driver = new ChromeDriver();
+//        } else if (browserList == BrowserList.EDGE) {
+//            driver = new EdgeDriver();
+//        } else {
+//            throw new RuntimeException("browser invalid");
 //        }
-
-        driver.manage().window().setPosition(new Point(0,0));
-        driver.manage().window().setSize(new Dimension(1920,1080));
+        switch (browserList) {
+            case FIREFOX:
+                driver = new FirefoxDriver();
+                break;
+            case CHROME:
+                driver = new ChromeDriver();
+                break;
+            case EDGE:
+                driver = new EdgeDriver();
+                break;
+            default:
+                throw new RuntimeException("Browser invalid");
+        }
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.sytner.co.uk/");
