@@ -22,14 +22,14 @@ public class BaseTest {
 
         String os = System.getProperty("os.name").toLowerCase();
         BrowserList browserList = BrowserList.valueOf(browser.toUpperCase());
-//        if (browserList == BrowserList.FIREFOX) {
+//        if (browserList.equals("FIREFOX")) {
 //            driver = new FirefoxDriver();
-//        } else if (browserList == BrowserList.CHROME) {
+//        } else if (browserList.equals("CHROME")) {
 //            driver = new ChromeDriver();
-//        } else if (browserList == BrowserList.EDGE) {
+//        } else if (browserList.equals("EDGE")) {
 //            driver = new EdgeDriver();
 //        } else {
-//            throw new RuntimeException("browser invalid");
+//            throw new RuntimeException("Browser invalid");
 //        }
         switch (browserList) {
             case FIREFOX:
@@ -44,7 +44,6 @@ public class BaseTest {
             default:
                 throw new RuntimeException("Browser invalid");
         }
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.sytner.co.uk/");
         return driver;
