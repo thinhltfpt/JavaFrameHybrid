@@ -45,7 +45,7 @@ public class BaseTest {
                 throw new RuntimeException("Browser invalid");
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get("https://www.sytner.co.uk/");
+        driver.get("https://live.techpanda.org/index.php/");
         return driver;
     }
 

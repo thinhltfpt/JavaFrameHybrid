@@ -7,8 +7,8 @@ import pageUIs.nopCommerce.HomePageUI;
 public class HomePageObject extends BasePage   {
     // khoi tao driver
     WebDriver driver;
-    public HomePageObject(WebDriver driverPageObject) {
-        this.driver = driverPageObject;
+    public HomePageObject(WebDriver driver) {
+        this.driver = driver;
     }
 
     // map driver
