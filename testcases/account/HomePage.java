@@ -10,18 +10,15 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.nopCommerce.AMGPageObject;
-import pageObjects.nopCommerce.AboutUSPageObject;
-import pageObjects.nopCommerce.AudiPageObject;
 import pageObjects.nopCommerce.HomePageObject;
+import pageObjects.nopCommerce.MobilePageObject;
+import pageObjects.nopCommerce.TVPageObject;
 
 public class HomePage extends BasePage {
     private WebDriver driver;
     private HomePageObject homePageObj;
-    private AudiPageObject AudiPage;
-    private AMGPageObject AMGPage;
-    private AboutUSPageObject aboutUSPage;
-
+    private MobilePageObject mobilePageObj;
+    private TVPageObject tvPageObj;
     // multi browser
     @Parameters("browser")  // denpendencies injection
     @BeforeClass
@@ -64,8 +61,6 @@ public class HomePage extends BasePage {
         sleepInSeconds(3);
         // click accept cookie
         clickToElement(driver, "//button[@id='onetrust-accept-btn-handler']");
-        Assert.assertEquals(homePageObj.getTextTheUltimate(), "The ultimate destination for luxury and performance cars");
-        homePageObj.clickToSearchLink();
 
     }
 

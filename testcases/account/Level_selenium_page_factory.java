@@ -7,10 +7,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObject.factory.CustomerPageObject;
-import pageObjects.nopCommerce.AMGPageObject;
-import pageObjects.nopCommerce.AboutUSPageObject;
-import pageObjects.nopCommerce.AudiPageObject;
-import pageObjects.nopCommerce.HomePageObject;
 
 public class Level_selenium_page_factory extends BaseTest {
     private WebDriver driver;

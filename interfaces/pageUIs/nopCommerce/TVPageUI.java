@@ -1,4 +1,4 @@
 package pageUIs.nopCommerce;
 
-public class AudiPageUI {
+public class TVPageUI {
 }

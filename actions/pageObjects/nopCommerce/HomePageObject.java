@@ -1,8 +1,10 @@
 package pageObjects.nopCommerce;
 
 import commons.BasePage;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.nopCommerce.HomePageUI;
+import pageUIs.nopCommerce.MobilePageUI;
 
 public class HomePageObject extends BasePage   {
     // khoi tao driver
@@ -12,27 +14,18 @@ public class HomePageObject extends BasePage   {
     }
 
     // map driver
-
-    public void clickToAboutUsLink(){
-        scrollToElement(driver,HomePageUI.ABOUT_US_LINK);
-        waitForElementVisible(driver,HomePageUI.ABOUT_US_LINK);
-        waitForElementClickable(driver,HomePageUI.ABOUT_US_LINK);
-        clickToElement(driver,HomePageUI.ABOUT_US_LINK);
+    public MobilePageObject clickToMobileLink(){
+        waitForElementClickable(driver, HomePageUI.MobileLink);
+        clickToElement(driver,HomePageUI.MobileLink);
+        return PageGeneratorManager.getMobilePage(driver);
     }
 
-    public void clickToMenuButton() {
+    public void searchField(){
+        sendkeyElement(driver,HomePageUI.searchField,"hello");
     }
 
-    public void clickToCloseMenuButton() {
+    public String getTextSearchField(){
+        return getElementText(driver,HomePageUI.searchField);
     }
 
-    public String getTextTheUltimate() {
-        waitForElementVisible(driver,HomePageUI.theUltimate);
-        return getElementText(driver,HomePageUI.theUltimate);
-    }
-
-    public void clickToSearchLink() {
-        waitForElementVisible(driver,HomePageUI.SEARCH_BY_LINK);
-        clickToElement(driver,HomePageUI.SEARCH_BY_LINK);
-    }
 }
