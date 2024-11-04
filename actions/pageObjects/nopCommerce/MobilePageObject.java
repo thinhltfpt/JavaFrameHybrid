@@ -15,8 +15,5 @@ public class MobilePageObject extends BasePage {
         getElementText(driver, MobilePageUI.textRoot);
     }
 
-    public HomePageObject clickToHomePage() {
-        clickToElement(driver,MobilePageUI.HomePageLink);
-        return PageGeneratorManager.getHomePage(driver);
-    }
+
 }

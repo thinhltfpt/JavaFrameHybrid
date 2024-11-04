@@ -35,18 +35,27 @@ public class HomePageManager extends BaseTest {
         homePageObj.searchField();
 
         // chuyen sang page Mobile
-        mobilePageObject = homePageObj.clickToMobileLink();
+        mobilePageObject = homePageObj.clickToMobileLink(driver);
         mobilePageObject.getTextRoot();
-        homePageObj = mobilePageObject.clickToHomePage();
+        homePageObj = mobilePageObject.clickToHomePage(driver);
 
         homePageObj.searchField();
     }
 
     @Test
-    public void TC_02() {
+    public void TC_02_SwitchPage() {
+        // homePage -> AccountPage
         homePageObj.clickToPopupListAccount();
-        accountPageObject = homePageObj.clickToAccountLink();
+        accountPageObject = homePageObj.clickToAccountLink(driver);
 
+        // AcoountPage -> MobilePage
+        mobilePageObject = accountPageObject.clickToMobileLink(driver);
+
+        // MobiPage -> HomePgae
+        homePageObj = mobilePageObject.clickToHomePage(driver);
+
+        // HomePage -> TVPage
+        tvPageObject = homePageObj.clickToTVPage(driver);
 
     }
 

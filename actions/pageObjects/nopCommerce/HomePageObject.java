@@ -14,11 +14,7 @@ public class HomePageObject extends BasePage   {
     }
 
     // map driver
-    public MobilePageObject clickToMobileLink(){
-        waitForElementClickable(driver, HomePageUI.MobileLink);
-        clickToElement(driver,HomePageUI.MobileLink);
-        return PageGeneratorManager.getMobilePage(driver);
-    }
+
 
     public void searchField(){
         sendkeyElement(driver,HomePageUI.searchField,"hello");
@@ -32,9 +28,6 @@ public class HomePageObject extends BasePage   {
         clickToElement(driver,HomePageUI.popUpAccount);
     }
 
-    public AccountPageObject clickToAccountLink(){
-        clickToElement(driver,HomePageUI.accountLink);
-        return PageGeneratorManager.getAccountPage(driver);
-    }
+
 
 }

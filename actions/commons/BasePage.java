@@ -7,6 +7,14 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.nopCommerce.AccountPageObject;
+import pageObjects.nopCommerce.HomePageObject;
+import pageObjects.nopCommerce.MobilePageObject;
+import pageObjects.nopCommerce.TVPageObject;
+import pageUIs.nopCommerce.AccountPageUI;
+import pageUIs.nopCommerce.BasePageUI;
+import pageUIs.nopCommerce.HomePageUI;
+import pageUIs.nopCommerce.MobilePageUI;
 
 import java.time.Duration;
 import java.util.List;
@@ -358,6 +366,40 @@ public class BasePage {
                         "&& typeof arguments[0].naturalWidth != 'undefined' && arguments[0].naturalWidth > 0",
                 getWebElement(driver, locator));
     }
+
+
+    // Switch pageObject
+    public MobilePageObject clickToMobileLink(WebDriver driver){
+        waitForElementClickable(driver, BasePageUI.MobileLink);
+        clickToElement(driver,BasePageUI.MobileLink);
+        return PageGeneratorManager.getMobilePage(driver);
+    }
+
+    public AccountPageObject clickToAccountLink(WebDriver driver){
+        clickToElement(driver,BasePageUI.accountLink);
+        return PageGeneratorManager.getAccountPage(driver);
+    }
+
+    public HomePageObject clickToHomePage(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.HomePageLink);
+        clickToElement(driver,BasePageUI.HomePageLink);
+        return PageGeneratorManager.getHomePage(driver);
+    }
+
+    public TVPageObject clickToTVPage(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.TVLink);
+        clickToElement(driver,BasePageUI.TVLink);
+        return PageGeneratorManager.getTVPage(driver);
+    }
+
+
+
+
+
+
+
+
+
 
 
 }
