@@ -28,4 +28,6 @@ public class HomePageUI {
     public static final String MobileLink = "//a[text()='Mobile']";
     public static final String searchField = "//input[@id='search']";
     public static final String TVLink = "//a[text()='TV']";
+    public static final String popUpAccount = "//a[@class='skip-link skip-account']//span[text()='Account']";
+    public static final String accountLink = "//div[@id=\"header-account\"]//a[@title='My Account']";
 }

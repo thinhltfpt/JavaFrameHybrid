@@ -124,11 +124,15 @@ public class BasePage {
     }
 
     // Cookies
-    public void getBrowserCookies(WebDriver driver) {
-        driver.manage().getCookies();
+    public Cookie getCookieName(WebDriver driver,String nameCookie){
+        return driver.manage().getCookieNamed(nameCookie);
     }
 
-    public void setCookies(WebDriver driver, Set<Cookie> cookies) {
+    public Set<Cookie> getBrowserCookies(WebDriver driver) {
+       return driver.manage().getCookies();
+    }
+
+    public synchronized void setCookies(WebDriver driver, Set<Cookie> cookies) {
         for (Cookie cookie : cookies) {
             driver.manage().addCookie(cookie);
         }

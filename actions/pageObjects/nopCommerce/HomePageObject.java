@@ -8,7 +8,7 @@ import pageUIs.nopCommerce.MobilePageUI;
 
 public class HomePageObject extends BasePage   {
     // khoi tao driver
-    WebDriver driver;
+    private WebDriver driver;
     public HomePageObject(WebDriver driver) {
         this.driver = driver;
     }
@@ -26,6 +26,15 @@ public class HomePageObject extends BasePage   {
 
     public String getTextSearchField(){
         return getElementText(driver,HomePageUI.searchField);
+    }
+
+    public void clickToPopupListAccount(){
+        clickToElement(driver,HomePageUI.popUpAccount);
+    }
+
+    public AccountPageObject clickToAccountLink(){
+        clickToElement(driver,HomePageUI.accountLink);
+        return PageGeneratorManager.getAccountPage(driver);
     }
 
 }
