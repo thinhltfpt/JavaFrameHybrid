@@ -20,10 +20,15 @@ public class LoginPageOB extends BasePage   {
         waitForElementVisible(driver, LoginPageUI.pass);
         sendkeyElement(driver, LoginPageUI.pass,"123456");
     }
-    public AccountPageObject clickToLoginButton(){
+    public MyDashboardPO clickToLoginButton(){
         waitForElementClickable(driver, LoginPageUI.loginButton);
         clickToElement(driver, LoginPageUI.loginButton);
-        return PageGeneratorManager.getAccountPage(driver);
+        return PageGeneratorManager.getMyDashboardPage(driver);
+    }
+
+    public void sendKeyEmailandPass(String value, String restParameter){
+        waitForElementVisible(driver,LoginPageUI.dynamic_pass_email,restParameter);
+        sendkeyElement(driver,LoginPageUI.dynamic_pass_email,value,restParameter);
     }
 
 

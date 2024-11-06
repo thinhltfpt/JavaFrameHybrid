@@ -148,6 +148,10 @@ public class BasePage {
     }
 
     /* Web Element */
+    private String castParameter(String locator,String... retParameter){
+        return String.format(locator,(Object[]) retParameter);
+    }
+
     private By getByLocator(String prefixLocator){
         By by = null;
         if (prefixLocator.toUpperCase().startsWith("ID")){
@@ -184,9 +188,18 @@ public class BasePage {
         getWebElement(driver, locator).click();
     }
 
+    public void clickToElement(WebDriver driver, String locator, String restParameter) {
+        getWebElement(driver, castParameter(locator,restParameter)).click();
+    }
+
     public void sendkeyElement(WebDriver driver, String locator, String valueToSend) {
         getWebElement(driver, locator).clear();
         getWebElement(driver, locator).sendKeys(valueToSend);
+    }
+
+    public void sendkeyElement(WebDriver driver, String locator, String valueToSend, String restParameter) {
+        getWebElement(driver, castParameter(locator,restParameter)).clear();
+        getWebElement(driver, castParameter(locator,restParameter)).sendKeys(valueToSend);
     }
 
 //    public String getElementText(WebDriver driver, String locator){
@@ -196,6 +209,10 @@ public class BasePage {
     // Default dropdown
     public void selectItemDefaultDropdown(WebDriver driver, String locator, String itemValue) {
         new Select(getWebElement(driver, locator)).selectByVisibleText(itemValue);
+    }
+
+    public void selectItemDefaultDropdown(WebDriver driver, String locator, String itemValue,String restParameter) {
+        new Select(getWebElement(driver, castParameter(locator,restParameter))).selectByVisibleText(itemValue);
     }
 
     public String getFirstSelectedTextInDefaultDropdown(WebDriver driver, String locator) {
@@ -224,13 +241,22 @@ public class BasePage {
     public String getElementText(WebDriver driver, String locator) {
         return getWebElement(driver, locator).getText();
     }
+    public String getElementText(WebDriver driver, String locator, String restParmeter) {
+        return getWebElement(driver, castParameter(locator,restParmeter)).getText();
+    }
 
     public String getElementAttribute(WebDriver driver, String locator, String attributeName) {
         return getWebElement(driver, locator).getAttribute(attributeName);
     }
+    public String getElementAttribute(WebDriver driver, String locator, String attributeName,String restParmeter) {
+        return getWebElement(driver, castParameter(locator,restParmeter)).getAttribute(attributeName);
+    }
 
     public String getElementCssValue(WebDriver driver, String locator, String cssPropertyName) {
         return getWebElement(driver, locator).getCssValue(cssPropertyName);
+    }
+    public String getElementCssValue(WebDriver driver, String locator, String cssPropertyName,String restParmeter) {
+        return getWebElement(driver, castParameter(locator,restParmeter)).getCssValue(cssPropertyName);
     }
 
     public String convertRGBToHexaColor(WebDriver driver, String locator) {
@@ -262,9 +288,22 @@ public class BasePage {
     public Boolean isElementDisplayed(WebDriver driver, String locator) {
         return getWebElement(driver, locator).isDisplayed();
     }
+    public Boolean isElementDisplayed(WebDriver driver, String locator,String restParmeter) {
+        return getWebElement(driver, castParameter(locator,restParmeter)).isDisplayed();
+    }
 
     public Boolean isElementEnabled(WebDriver driver, String locator) {
         return getWebElement(driver, locator).isEnabled();
+    }
+    public Boolean isElementEnabled(WebDriver driver, String locator,String restParmeter) {
+        return getWebElement(driver, castParameter(locator,restParmeter)).isEnabled();
+    }
+
+    public boolean isElementSelected(WebDriver driver,String locator){
+        return getWebElement(driver,locator).isSelected();
+    }
+    public boolean isElementSelected(WebDriver driver,String locator, String restParmeter){
+        return getWebElement(driver,castParameter(locator,restParmeter)).isSelected();
     }
 
     // Frame/ Iframe
@@ -310,13 +349,29 @@ public class BasePage {
     public void waitForElementVisible(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locator)));
     }
+    public void waitForElementVisible(WebDriver driver, String locator,String restParmeter) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(castParameter(locator,restParmeter))));
+    }
+
+    public void waitForElementSelected(WebDriver driver,String locator){
+        new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeSelected(getByLocator(locator)));
+    }
+    public void waitForElementSelected(WebDriver driver,String locator,String restParmeter){
+        new WebDriverWait(driver,Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeSelected(getByLocator(castParameter(locator,restParmeter))));
+    }
 
     public void waitForListElementVisible(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfAllElements(getListWebElement(driver, locator)));
     }
+    public void waitForListElementVisible(WebDriver driver, String locator,String restParmeter) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfAllElements(getListWebElement(driver, castParameter(locator,restParmeter))));
+    }
 
     public void waitForElementInvisible(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locator)));
+    }
+    public void waitForElementInvisible(WebDriver driver, String locator,String restParmeter) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(castParameter(locator,restParmeter))));
     }
 
     public void waitForListElementInvisible(WebDriver driver, String locator) {
@@ -325,6 +380,9 @@ public class BasePage {
 
     public void waitForElementClickable(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver, locator)));
+    }
+    public void waitForElementClickable(WebDriver driver, String locator,String restParmeter) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver, castParameter(locator,restParmeter))));
     }
 
     public void waitForTextVisible(WebDriver driver, String locator, String textExpect) {

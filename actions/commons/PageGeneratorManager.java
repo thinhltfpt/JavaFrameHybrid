@@ -32,6 +32,12 @@ public class PageGeneratorManager {
         return new WishlistPageObject(driver);
     }
 
+    public static MyDashboardPO getMyDashboardPage(WebDriver driver){
+        return new MyDashboardPO(driver);
+    }
+    public static MyInforPO getMyInforPage(WebDriver driver){
+        return new MyInforPO(driver);
+    }
 
 
     // admin page
@@ -40,5 +46,10 @@ public class PageGeneratorManager {
     }
     public static AdminDashboardPO getAdminDashboardPage(WebDriver driver){
         return new AdminDashboardPO(driver);
+    }
+
+
+    public static MyAdressBookOP getMyAdressBookPage(WebDriver driver) {
+        return new MyAdressBookOP(driver) ;
     }
 }

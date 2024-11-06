@@ -6,7 +6,7 @@
     <test name="run Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="account.Switch_site_URL"/>
+            <class name="account.Dynamic_locator"/>
         </classes>
     </test>
 
