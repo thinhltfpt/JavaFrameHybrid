@@ -49,6 +49,28 @@ public class BaseTest {
         return driver;
     }
 
+    protected WebDriver getBrowserDriver(String browser,String url){
+        String os = System.getProperty("os.name").toLowerCase();
+        BrowserList browserList = BrowserList.valueOf(browser.toUpperCase());
+
+        switch (browserList) {
+            case FIREFOX:
+                driver = new FirefoxDriver();
+                break;
+            case CHROME:
+                driver = new ChromeDriver();
+                break;
+            case EDGE:
+                driver = new EdgeDriver();
+                break;
+            default:
+                throw new RuntimeException("Browser invalid");
+        }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.get(url);
+        return driver;
+    }
+
     protected  String GetEmailRandom(){
         Random rand = new Random();
         String email = "letienthinh" + rand.nextInt(8888) + "gmail.com";

@@ -1,4 +1,4 @@
-package pageUIs.nopCommerce;
+package pageUIs.users;
 
 public class HomePageUI {
 
@@ -26,8 +26,8 @@ public class HomePageUI {
 
     // field/ bien'
 
-    public static final String searchField = "//input[@id='search']";
+    public static final String searchField = "xpath=//input[@id='search']";
 
-    public static final String popUpAccount = "//a[@class='skip-link skip-account']//span[text()='Account']";
+    public static final String popUpAccount = "xpath=//a[@class='skip-link skip-account']//span[text()='Account']";
 
 }

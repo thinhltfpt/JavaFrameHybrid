@@ -1,10 +1,8 @@
-package pageObjects.nopCommerce;
+package pageObjects.users;
 
 import commons.BasePage;
-import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.nopCommerce.HomePageUI;
-import pageUIs.nopCommerce.MobilePageUI;
+import pageUIs.users.HomePageUI;
 
 public class HomePageObject extends BasePage   {
     // khoi tao driver

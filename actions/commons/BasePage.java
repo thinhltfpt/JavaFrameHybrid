@@ -1,20 +1,17 @@
 package commons;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.nopCommerce.AccountPageObject;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.MobilePageObject;
-import pageObjects.nopCommerce.TVPageObject;
-import pageUIs.nopCommerce.AccountPageUI;
-import pageUIs.nopCommerce.BasePageUI;
-import pageUIs.nopCommerce.HomePageUI;
-import pageUIs.nopCommerce.MobilePageUI;
+import pageObjects.users.AccountPageObject;
+import pageObjects.users.HomePageObject;
+import pageObjects.users.MobilePageObject;
+import pageObjects.users.TVPageObject;
+import pageUIs.BasePageUI;
+import pageUIs.users.PopUpPageUI;
 
 import java.time.Duration;
 import java.util.List;
@@ -151,16 +148,36 @@ public class BasePage {
     }
 
     /* Web Element */
-    public By getByXpath(String locator) {
+    private By getByLocator(String prefixLocator){
+        By by = null;
+        if (prefixLocator.toUpperCase().startsWith("ID")){
+            by = By.id(prefixLocator.substring(3));
+        } else if (prefixLocator.toUpperCase().startsWith("CLASS")){
+            by = By.className(prefixLocator.substring(6));
+        } else if (prefixLocator.toUpperCase().startsWith("NAME")){
+            by = By.name(prefixLocator.substring(5));
+        } else if (prefixLocator.toUpperCase().startsWith("TAGNAME")){
+            by = By.tagName(prefixLocator.substring(8));
+        } else if (prefixLocator.toUpperCase().startsWith("CSS")){
+            by = By.cssSelector(prefixLocator.substring(4));
+        } else if (prefixLocator.toUpperCase().startsWith("XPATH")){
+            by = By.xpath(prefixLocator.substring(6));
+        } else {
+            throw new RuntimeException("Location type is not support");
+        }
+        return by;
+    }
+
+    private By getByXpath(String locator) {
         return By.xpath(locator);
     }
 
     public WebElement getWebElement(WebDriver driver, String locator) {
-        return driver.findElement(getByXpath(locator));
+        return driver.findElement(getByLocator(locator));
     }
 
     public List<WebElement> getListWebElement(WebDriver driver, String locator) {
-        return driver.findElements(getByXpath(locator));
+        return driver.findElements(getByLocator(locator));
     }
 
     public void clickToElement(WebDriver driver, String locator) {
@@ -252,7 +269,7 @@ public class BasePage {
 
     // Frame/ Iframe
     public void switchToIframe(WebDriver driver, String locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(getByLocator(locator)));
     }
 
     public void switchToDefaultContent(WebDriver driver, String locator) {
@@ -291,7 +308,7 @@ public class BasePage {
      *  Wait
      * */
     public void waitForElementVisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locator)));
     }
 
     public void waitForListElementVisible(WebDriver driver, String locator) {
@@ -299,7 +316,7 @@ public class BasePage {
     }
 
     public void waitForElementInvisible(WebDriver driver, String locator) {
-        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locator)));
     }
 
     public void waitForListElementInvisible(WebDriver driver, String locator) {
@@ -311,7 +328,7 @@ public class BasePage {
     }
 
     public void waitForTextVisible(WebDriver driver, String locator, String textExpect) {
-        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.textToBePresentInElementLocated(getByXpath(locator),textExpect));
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.textToBePresentInElementLocated(getByLocator(locator),textExpect));
     }
 
 
@@ -369,16 +386,9 @@ public class BasePage {
 
 
     // Switch pageObject
-    public MobilePageObject clickToMobileLink(WebDriver driver){
-        waitForElementClickable(driver, BasePageUI.MobileLink);
-        clickToElement(driver,BasePageUI.MobileLink);
-        return PageGeneratorManager.getMobilePage(driver);
-    }
 
-    public AccountPageObject clickToAccountLink(WebDriver driver){
-        clickToElement(driver,BasePageUI.accountLink);
-        return PageGeneratorManager.getAccountPage(driver);
-    }
+
+
 
     public HomePageObject clickToHomePage(WebDriver driver) {
         waitForElementClickable(driver, BasePageUI.HomePageLink);
@@ -388,14 +398,22 @@ public class BasePage {
 
     public TVPageObject clickToTVPage(WebDriver driver) {
         waitForElementClickable(driver, BasePageUI.TVLink);
-        clickToElement(driver,BasePageUI.TVLink);
+        clickToElement(driver, BasePageUI.TVLink);
         return PageGeneratorManager.getTVPage(driver);
     }
 
+    public MobilePageObject clickToMobileLink(WebDriver driver){
+        waitForElementClickable(driver, BasePageUI.MobileLink);
+        clickToElement(driver, BasePageUI.MobileLink);
+        return PageGeneratorManager.getMobilePage(driver);
+    }
 
 
-
-
+    public AccountPageObject clickToAccountLink(WebDriver driver) {
+        waitForElementClickable(driver, PopUpPageUI.accountLink);
+        clickToElement(driver, PopUpPageUI.accountLink);
+        return PageGeneratorManager.getAccountPage(driver);
+    }
 
 
 

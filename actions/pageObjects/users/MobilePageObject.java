@@ -1,9 +1,8 @@
-package pageObjects.nopCommerce;
+package pageObjects.users;
 
 import commons.BasePage;
-import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.nopCommerce.MobilePageUI;
+import pageUIs.users.MobilePageUI;
 
 public class MobilePageObject extends BasePage {
     WebDriver driver;

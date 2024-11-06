@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="sytner" parallel="false">
-
+    <parameter name="userURL" value="https://live.techpanda.org/index.php/customer/account/login/"/>
+    <parameter name="adminURL" value="https://live.techpanda.org/index.php/backendlogin/index/index/key/6428ab39371dabcf3b83fba01d47b3b3/"/>
     <test name="run Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="account.HomePageManager"/>
+            <class name="account.Switch_site_URL"/>
         </classes>
     </test>
 

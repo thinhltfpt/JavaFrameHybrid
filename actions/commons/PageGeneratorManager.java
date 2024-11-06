@@ -1,10 +1,10 @@
 package commons;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.nopCommerce.AccountPageObject;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.MobilePageObject;
-import pageObjects.nopCommerce.TVPageObject;
+import pageObjects.admin.AdminDashboardPO;
+import pageObjects.admin.AdminLoginPO;
+import pageObjects.users.LoginPageOB;
+import pageObjects.users.*;
 
 public class PageGeneratorManager {
 
@@ -24,7 +24,21 @@ public class PageGeneratorManager {
         return new AccountPageObject(driver);
     }
 
+    public static LoginPageOB getLoginPage(WebDriver driver){
+        return new LoginPageOB(driver);
+    }
+
+    public static WishlistPageObject getWishlistLink(WebDriver driver) {
+        return new WishlistPageObject(driver);
+    }
 
 
 
+    // admin page
+    public static AdminLoginPO getAdminLoginPage(WebDriver driver){
+        return new AdminLoginPO(driver);
+    }
+    public static AdminDashboardPO getAdminDashboardPage(WebDriver driver){
+        return new AdminDashboardPO(driver);
+    }
 }

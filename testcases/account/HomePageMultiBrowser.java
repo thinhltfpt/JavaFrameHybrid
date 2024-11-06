@@ -6,7 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.nopCommerce.HomePageObject;
+import pageObjects.users.HomePageObject;
 
 public class HomePageMultiBrowser extends BaseTest {
     private WebDriver driver;
