@@ -67,6 +67,7 @@ public class BaseTest {
                 throw new RuntimeException("Browser invalid");
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().window().maximize();
         driver.get(url);
         return driver;
     }
