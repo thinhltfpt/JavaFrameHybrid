@@ -183,6 +183,9 @@ public class BasePage {
     public List<WebElement> getListWebElement(WebDriver driver, String locator) {
         return driver.findElements(getByLocator(locator));
     }
+    public List<WebElement> getListWebElement(WebDriver driver, String locator,String restParameter) {
+        return driver.findElements(getByLocator(castParameter(locator,restParameter)));
+    }
 
     public void clickToElement(WebDriver driver, String locator) {
         getWebElement(driver, locator).click();
@@ -266,6 +269,9 @@ public class BasePage {
     public int getListElementSize(WebDriver driver, String locator) {
         return getListWebElement(driver, locator).size();
     }
+    public int getListElementSize(WebDriver driver, String locator,String... restParameter) {
+        return getListWebElement(driver, castParameter(locator,restParameter)).size();
+    }
 
     /*
      * Apply for checkbox and radio
@@ -273,6 +279,11 @@ public class BasePage {
     public void checkToElement(WebDriver driver, String locator) {
         if (!getWebElement(driver, locator).isSelected()) {
             getWebElement(driver, locator).click();
+        }
+    }
+    public void checkToElement(WebDriver driver, String locator,String... restParameter) {
+        if (!getWebElement(driver, castParameter(locator,restParameter)).isSelected()) {
+            getWebElement(driver, castParameter(locator,restParameter)).click();
         }
     }
 
