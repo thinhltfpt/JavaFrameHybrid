@@ -190,6 +190,9 @@ public class BasePage {
     public void clickToElement(WebDriver driver, String locator) {
         getWebElement(driver, locator).click();
     }
+    public void clickToElement(WebDriver driver, WebElement element) {
+        element.click();
+    }
 
     public void clickToElement(WebDriver driver, String locator, String... restParameter) {
         getWebElement(driver, castParameter(locator,restParameter)).click();
@@ -203,6 +206,16 @@ public class BasePage {
     public void sendkeyElement(WebDriver driver, String locator, String valueToSend, String... restParameter) {
         getWebElement(driver, castParameter(locator,restParameter)).clear();
         getWebElement(driver, castParameter(locator,restParameter)).sendKeys(valueToSend);
+    }
+
+    public void uploadMuiltipleFiles(WebDriver driver, String... fileNames){
+        String filePath = GlobalConstants.UPLOAD_PATH;
+        String fullFileName = "";
+        for (String file : fileNames){
+            fullFileName = fullFileName + filePath + file + "\n";
+        }
+        fullFileName = fullFileName.trim();
+        getWebElement(driver,BasePageUI.UPLOAD_FILE_TYPE).sendKeys(fullFileName);
     }
 
 //    public String getElementText(WebDriver driver, String locator){
@@ -391,6 +404,9 @@ public class BasePage {
 
     public void waitForElementClickable(WebDriver driver, String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver, locator)));
+    }
+    public void waitForElementClickable(WebDriver driver, WebElement element) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(element));
     }
     public void waitForElementClickable(WebDriver driver, String locator,String... restParmeter) {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(driver, castParameter(locator,restParmeter))));

@@ -1,9 +1,9 @@
-package pageObjectt.jQuery;
+package pageObjectt.jQuery.table;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pageUI.jQuery.HomeJqueryUI;
+import pageUI.jQuery.table.HomeJqueryUI;
 
 import java.util.ArrayList;
 import java.util.List;

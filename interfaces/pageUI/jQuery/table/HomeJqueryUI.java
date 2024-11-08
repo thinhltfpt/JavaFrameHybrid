@@ -1,4 +1,4 @@
-package pageUI.jQuery;
+package pageUI.jQuery.table;
 
 public class HomeJqueryUI {
 

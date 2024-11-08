@@ -1,16 +1,13 @@
 package com.jquery.table;
 
 import commons.BaseTest;
-import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.users.*;
-import pageObjectt.jQuery.HomeJquery;
-import pageObjectt.jQuery.PageManagerJquery;
+import pageObjectt.jQuery.table.HomeJquery;
+import pageObjectt.jQuery.table.PageManagerJquery;
 
 import java.util.ArrayList;
 import java.util.List;
