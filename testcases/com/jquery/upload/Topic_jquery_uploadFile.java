@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pageObjectt.jQuery.table.HomeJquery;
 import pageObjectt.jQuery.table.PageManagerJquery;
 import pageObjectt.jQuery.upload.UploadPageOb;
@@ -33,6 +34,7 @@ public class Topic_jquery_uploadFile extends BaseTest {
 
     @Test
     public void TC_01_Upload_SingleFile() {
+        SoftAssert softAssert = new SoftAssert();
         log.info("TC_01_upload_single - Step 1: upload file 1 " + unamed);
         uploadPageOb.uploadMuiltipleFiles(driver,unamed);
         uploadPageOb.sleepInSeconds(2);
@@ -40,14 +42,15 @@ public class Topic_jquery_uploadFile extends BaseTest {
         uploadPageOb.uploadMuiltipleFiles(driver,screenShot);
         uploadPageOb.sleepInSeconds(2);
         log.info("TC_01_upload_single - Step 3: verify loaded file 1" +unamed);
-        Assert.assertTrue(uploadPageOb.isFileLoadedSuccess(unamed));
+        verifyTrue(uploadPageOb.isFileLoadedSuccess(unamed));
         log.info("TC_01_upload_single - Step 4: verify loaded file 2" +screenShot);
-        Assert.assertTrue(uploadPageOb.isFileLoadedSuccess(screenShot));
+//        verifyFalse(uploadPageOb.isFileLoadedSuccess(screenShot));
+        softAssert.assertFalse(uploadPageOb.isFileLoadedSuccess(screenShot),"not success is on log");
 
         uploadPageOb.clickStartButtonOnEachFile();
         Assert.assertTrue(uploadPageOb.isFileUploadedSuccess(unamed));
         Assert.assertTrue(uploadPageOb.isFileUploadedSuccess(screenShot));
-
+        softAssert.assertAll();
     }
 
 //    @Test
