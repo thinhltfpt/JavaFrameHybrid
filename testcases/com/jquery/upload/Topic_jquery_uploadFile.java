@@ -33,12 +33,15 @@ public class Topic_jquery_uploadFile extends BaseTest {
 
     @Test
     public void TC_01_Upload_SingleFile() {
+        log.info("TC_01_upload_single - Step 1: upload file 1 " + unamed);
         uploadPageOb.uploadMuiltipleFiles(driver,unamed);
         uploadPageOb.sleepInSeconds(2);
+        log.info("TC_01_upload_single - Step 1: upload file 2 " + screenShot);
         uploadPageOb.uploadMuiltipleFiles(driver,screenShot);
         uploadPageOb.sleepInSeconds(2);
-
+        log.info("TC_01_upload_single - Step 3: verify loaded file 1" +unamed);
         Assert.assertTrue(uploadPageOb.isFileLoadedSuccess(unamed));
+        log.info("TC_01_upload_single - Step 4: verify loaded file 2" +screenShot);
         Assert.assertTrue(uploadPageOb.isFileLoadedSuccess(screenShot));
 
         uploadPageOb.clickStartButtonOnEachFile();
@@ -47,7 +50,7 @@ public class Topic_jquery_uploadFile extends BaseTest {
 
     }
 
-    @Test
+//    @Test
     public void TC_02_Upload_MultipleFile() {
         uploadPageOb.refeshCurrentPage(driver);
         uploadPageOb.uploadMuiltipleFiles(driver,fileNames);

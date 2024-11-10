@@ -1,5 +1,7 @@
 package commons;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -7,13 +9,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 import java.time.Duration;
 import java.util.Random;
 
 public class BaseTest {
+    protected final Logger log;
+    public BaseTest() {
+        log = LogManager.getLogger(getClass());
+    }
+
     WebDriver driver;
     WebDriverWait implicitWait;
+
+
     protected WebDriver getBrowserDriver(String browser){
         // == thi` kiem tra gia tri
         // equal thi` kiem tra vung` nho' (String dun`g)
@@ -85,6 +96,87 @@ public class BaseTest {
             driver.quit();
         }
     }
+
+    // logging
+    protected boolean verifyTrue(boolean condition) {
+        boolean status = true;
+        try {
+            Assert.assertTrue(condition);
+            log.info("---------------------- Passed -----------------------");
+        } catch (Throwable e) {
+            status = false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+            log.info("---------------------- Failed -----------------------");
+        }
+        return status;
+    }
+
+    protected boolean verifyFalse(boolean condition) {
+        boolean status = true;
+        try {
+            Assert.assertFalse(condition);
+            log.info("---------------------- Passed -----------------------");
+        } catch (Throwable e) {
+            status = false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+            log.info("---------------------- Failed -----------------------");
+        }
+        return status;
+    }
+
+    protected boolean verifyEquals(Object actual, Object expected) {
+        boolean status = true;
+        try {
+            Assert.assertEquals(actual, expected);
+            log.info("---------------------- Passed -----------------------");
+        } catch (Throwable e) {
+            status = false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+            log.info("---------------------- Failed -----------------------");
+        }
+        return status;
+    }
+
+//    protected boolean verifyTrue(boolean condition) {
+//        boolean pass = true;
+//        try {
+//            Assert.assertTrue(condition);
+//        } catch (Throwable e) {
+//            pass = false;
+//
+//            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+//            Reporter.getCurrentTestResult().setThrowable(e);
+//        }
+//        return pass;
+//    }
+//
+//    protected boolean verifyFalse(boolean condition) {
+//        boolean pass = true;
+//        try {
+//            Assert.assertFalse(condition);
+//        } catch (Throwable e) {
+//            pass = false;
+//            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+//            Reporter.getCurrentTestResult().setThrowable(e);
+//        }
+//        return pass;
+//    }
+//
+//    protected boolean verifyEquals(Object actual, Object expected) {
+//        boolean pass = true;
+//        try {
+//            Assert.assertEquals(actual, expected);
+//        } catch (Throwable e) {
+//            pass = false;
+//            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+//            Reporter.getCurrentTestResult().setThrowable(e);
+//        }
+//        return pass;
+//    }
+
 
 
 }
