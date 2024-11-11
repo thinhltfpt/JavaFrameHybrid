@@ -20,9 +20,10 @@ public class Topic_jquery_uploadFile extends BaseTest {
     private WebDriver driver;
     private UploadPageOb uploadPageOb;
     private String unamed = "Screenshot 2024-02-07 104902.png";
-    private String screenShot ="unnamed.jpg";
+    private String screenShot = "unnamed.jpg";
 
-    String[] fileNames = {unamed,screenShot};
+    String[] fileNames = {unamed, screenShot};
+
     // multi browser
     @Parameters({"browser", "url"})  // denpendencies injection
     @BeforeClass
@@ -36,16 +37,16 @@ public class Topic_jquery_uploadFile extends BaseTest {
     public void TC_01_Upload_SingleFile() {
         SoftAssert softAssert = new SoftAssert();
         log.info("TC_01_upload_single - Step 1: upload file 1 " + unamed);
-        uploadPageOb.uploadMuiltipleFiles(driver,unamed);
+        uploadPageOb.uploadMuiltipleFiles(driver, unamed);
         uploadPageOb.sleepInSeconds(2);
         log.info("TC_01_upload_single - Step 1: upload file 2 " + screenShot);
-        uploadPageOb.uploadMuiltipleFiles(driver,screenShot);
+        uploadPageOb.uploadMuiltipleFiles(driver, screenShot);
         uploadPageOb.sleepInSeconds(2);
-        log.info("TC_01_upload_single - Step 3: verify loaded file 1" +unamed);
+        log.info("TC_01_upload_single - Step 3: verify loaded file 1" + unamed);
         verifyTrue(uploadPageOb.isFileLoadedSuccess(unamed));
-        log.info("TC_01_upload_single - Step 4: verify loaded file 2" +screenShot);
+        log.info("TC_01_upload_single - Step 4: verify loaded file 2" + screenShot);
 //        verifyFalse(uploadPageOb.isFileLoadedSuccess(screenShot));
-        softAssert.assertFalse(uploadPageOb.isFileLoadedSuccess(screenShot),"not success is on log");
+        softAssert.assertFalse(uploadPageOb.isFileLoadedSuccess(screenShot), "not success is on log");
 
         uploadPageOb.clickStartButtonOnEachFile();
         Assert.assertTrue(uploadPageOb.isFileUploadedSuccess(unamed));
@@ -53,11 +54,11 @@ public class Topic_jquery_uploadFile extends BaseTest {
         softAssert.assertAll();
     }
 
-//    @Test
+    @Test
     public void TC_02_Upload_MultipleFile() {
         uploadPageOb.refeshCurrentPage(driver);
-        uploadPageOb.uploadMuiltipleFiles(driver,fileNames);
-        Assert.assertTrue(uploadPageOb.isFileLoadedSuccess(unamed));
+        uploadPageOb.uploadMuiltipleFiles(driver, fileNames);
+        Assert.assertFalse(uploadPageOb.isFileLoadedSuccess(unamed));
         Assert.assertTrue(uploadPageOb.isFileLoadedSuccess(screenShot));
 
         uploadPageOb.clickStartButtonOnEachFile();

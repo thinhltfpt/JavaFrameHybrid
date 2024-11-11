@@ -1,5 +1,0 @@
-[10-11-2024 17:40:56.453 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
-[10-11-2024 17:40:58.528 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
-[10-11-2024 17:41:00.561 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
-[10-11-2024 17:41:00.599 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
-[10-11-2024 17:41:00.599 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg

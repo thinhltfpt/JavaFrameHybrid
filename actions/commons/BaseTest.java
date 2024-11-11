@@ -11,21 +11,29 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.Random;
 
 public class BaseTest {
     protected final Logger log;
+
     public BaseTest() {
         log = LogManager.getLogger(getClass());
     }
 
-    WebDriver driver;
+    private WebDriver driver;
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
     WebDriverWait implicitWait;
 
 
-    protected WebDriver getBrowserDriver(String browser){
+    protected WebDriver getBrowserDriver(String browser) {
         // == thi` kiem tra gia tri
         // equal thi` kiem tra vung` nho' (String dun`g)
         // equal: dung' value - dung' hoa thuong`
@@ -60,7 +68,7 @@ public class BaseTest {
         return driver;
     }
 
-    protected WebDriver getBrowserDriver(String browser,String url){
+    protected WebDriver getBrowserDriver(String browser, String url) {
         String os = System.getProperty("os.name").toLowerCase();
         BrowserList browserList = BrowserList.valueOf(browser.toUpperCase());
 
@@ -83,14 +91,14 @@ public class BaseTest {
         return driver;
     }
 
-    protected  String GetEmailRandom(){
+    protected String GetEmailRandom() {
         Random rand = new Random();
         String email = "letienthinh" + rand.nextInt(8888) + "gmail.com";
         return "letienthinh" + new Random().nextInt(8888) + "gmail.com";
     }
 
-    protected void closeBrowser(){
-        if (driver == null){
+    protected void closeBrowser() {
+        if (driver == null) {
             System.out.println("Browser is closed");
         } else {
             driver.quit();
@@ -140,6 +148,33 @@ public class BaseTest {
         return status;
     }
 
+    @BeforeSuite
+    public void deleteFileInReport() {
+        // Remove all file in ReportNG screenshot (image)
+        deleteAllFileInFolder("reportNGImage");
+
+        // Remove all file in Allure attachment (json file)
+        deleteAllFileInFolder("allure-json");
+    }
+
+    public void deleteAllFileInFolder(String folderName) {
+        try {
+            String pathFolderDownload = GlobalConstants.RELATIVE_PROJECT_PATH + File.separator + folderName;
+            File file = new File(pathFolderDownload);
+            File[] listOfFiles = file.listFiles();
+            if (listOfFiles.length != 0) {
+                for (int i = 0; i < listOfFiles.length; i++) {
+                    if (listOfFiles[i].isFile() && !listOfFiles[i].getName().equals("environment.properties")) {
+                        new File(listOfFiles[i].toString()).delete();
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
+    }
+}
+
 //    protected boolean verifyTrue(boolean condition) {
 //        boolean pass = true;
 //        try {
@@ -179,4 +214,5 @@ public class BaseTest {
 
 
 
-}
+
+

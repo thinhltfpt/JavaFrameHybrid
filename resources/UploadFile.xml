@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="jquery-data table- table grid" >
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
     <parameter name="url" value="https://blueimp.github.io/jQuery-File-Upload/"/>
     <test name="run Firefox">
         <parameter name="browser" value="firefox"/>
@@ -9,12 +15,12 @@
         </classes>
     </test>
 
-<!--    <test name="run Chrome">-->
-<!--        <parameter name="browser" value="chrome"/>-->
-<!--        <classes>-->
-<!--            <class name="account.HomePageManager"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="run Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.jquery.upload.Topic_jquery_uploadFile"/>
+        </classes>
+    </test>
 
 <!--    <test name="run Edge">-->
 <!--        <parameter name="browser" value="edge"/>-->
