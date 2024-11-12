@@ -38,9 +38,23 @@ public class ReportNGListener implements ITestListener {
         System.out.println("---------- " + result.getName() + " SUCCESS test ----------");
     }
 
+//    @Override
+//    public void onTestFailure(ITestResult result) {
+////        System.out.println("---------- " + result.getName() + " FAILED test ----------");
+//        System.setProperty("org.uncommons.reportng.escape-output", "false");
+//
+//        Object testClass = result.getInstance();
+//        WebDriver webDriver = ((BaseTest) testClass).getDriver();
+//
+//        String screenshotPath = captureScreenshot(webDriver, result.getName());
+//        Reporter.getCurrentTestResult();
+//        Reporter.log("<br><a target=\"_blank\" href=\"data:image/png;base64," + screenshotPath + "\">" + "<img src=\"data:image/png;base64," + screenshotPath + "\" " + "height='100' width='150'/> " + "</a></br>");
+//        Reporter.setCurrentTestResult(null);
+//    }
+
     @Override
     public void onTestFailure(ITestResult result) {
-//        System.out.println("---------- " + result.getName() + " FAILED test ----------");
+        System.out.println("---------- " + result.getName() + " FAILED test ----------");
         System.setProperty("org.uncommons.reportng.escape-output", "false");
 
         Object testClass = result.getInstance();
@@ -48,7 +62,7 @@ public class ReportNGListener implements ITestListener {
 
         String screenshotPath = captureScreenshot(webDriver, result.getName());
         Reporter.getCurrentTestResult();
-        Reporter.log("<br><a target=\"_blank\" href=\"data:image/png;base64," + screenshotPath + "\">" + "<img src=\"data:image/png;base64," + screenshotPath + "\" " + "height='100' width='150'/> " + "</a></br>");
+        Reporter.log("<br><a target=\"_blank\" href=\"file:///" + screenshotPath + "\">" + "<img src=\"file:///" + screenshotPath + "\" " + "height='100' width='150'/> " + "</a></br>");
         Reporter.setCurrentTestResult(null);
     }
 

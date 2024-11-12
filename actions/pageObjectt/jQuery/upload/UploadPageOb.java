@@ -15,7 +15,6 @@ public class UploadPageOb extends BasePage {
         this.driver = driver;
     }
 
-
     public boolean isFileLoadedSuccess(String fileName) {
         waitForElementVisible(driver, UploadPageUI.FILE_LOADED_BY_NAME,fileName);
         return isElementDisplayed(driver,UploadPageUI.FILE_LOADED_BY_NAME,fileName);

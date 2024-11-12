@@ -1,4 +1,10 @@
 package reportConfig;
 
-public class AllureReportListener {
+
+
+
+public class AllureReportListener  {
+
+
+
 }

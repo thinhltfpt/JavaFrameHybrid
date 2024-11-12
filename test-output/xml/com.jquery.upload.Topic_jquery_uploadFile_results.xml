@@ -4,9 +4,9 @@
            failures="2"
            errors="0"
            skipped="0"
-           time="5.994">
+           time="6.051">
   <properties />
-            <testcase name="TC_02_Upload_MultipleFile" time="0.715" classname="com.jquery.upload.Topic_jquery_uploadFile">
+            <testcase name="TC_02_Upload_MultipleFile" time="0.787" classname="com.jquery.upload.Topic_jquery_uploadFile">
                 <failure type="java.lang.AssertionError"
                   message="expected [false] but found [true]"
               >
@@ -47,7 +47,7 @@
       </failure>
 
           </testcase>
-            <testcase name="TC_01_Upload_SingleFile" time="5.279" classname="com.jquery.upload.Topic_jquery_uploadFile">
+            <testcase name="TC_01_Upload_SingleFile" time="5.264" classname="com.jquery.upload.Topic_jquery_uploadFile">
                 <failure type="java.lang.AssertionError"
                   message="The following asserts failed:
 	not success is on log expected [false] but found [true]"

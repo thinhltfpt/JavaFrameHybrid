@@ -97,3 +97,113 @@
 [11-11-2024 18:00:11.665 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
 [11-11-2024 18:00:11.698 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
 [11-11-2024 18:00:11.698 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:31:47.110 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:31:49.198 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:31:51.230 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:31:51.266 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:31:51.266 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:34:00.172 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:34:02.232 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:34:04.252 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:34:04.295 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:34:04.295 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:35:52.295 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:35:54.379 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:35:56.402 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:35:56.457 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:35:56.457 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:37:47.413 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:37:49.465 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:37:51.491 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:37:51.546 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:37:51.546 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:38:03.222 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:38:05.287 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:38:07.309 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:38:07.348 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:38:07.348 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:39:03.046 INFO com.jquery.upload.Tpic_uploadFile_Allure_report] - ---------------------- Passed -----------------------
+[12-11-2024 18:39:19.869 INFO com.jquery.upload.Tpic_uploadFile_Allure_report] - ---------------------- Passed -----------------------
+[12-11-2024 18:44:40.150 INFO com.jquery.upload.Tpic_uploadFile_Allure_report] - ---------------------- Passed -----------------------
+[12-11-2024 18:45:10.252 INFO com.jquery.upload.Tpic_uploadFile_Allure_report] - ---------------------- Passed -----------------------
+[12-11-2024 18:45:56.047 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:45:58.124 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:46:00.158 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:46:00.206 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:46:00.206 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:46:05.061 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:46:07.140 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:46:09.205 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:46:09.274 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:46:09.274 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:46:23.681 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:46:25.731 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:46:27.749 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:46:27.793 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:46:27.793 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:46:31.823 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:46:33.884 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:46:35.935 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:46:35.990 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:46:35.991 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:49:16.514 INFO com.jquery.upload.Tpic_uploadFile_Allure_report] - ---------------------- Passed -----------------------
+[12-11-2024 18:54:01.842 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:54:03.909 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:54:05.937 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:54:05.972 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:54:05.973 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:54:11.486 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:54:13.552 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:54:15.614 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:54:15.656 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:54:15.656 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:56:15.355 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:56:17.418 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:56:19.447 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:56:19.487 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:56:19.487 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 18:56:23.295 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 18:56:25.341 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 18:56:27.395 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 18:56:27.434 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 18:56:27.434 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 19:01:10.100 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 19:01:12.159 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 19:01:14.179 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 19:01:14.223 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 19:01:14.223 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 19:01:17.700 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 19:01:20.573 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 19:01:22.616 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 19:01:22.671 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 19:01:22.671 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 19:06:15.944 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 19:06:18.008 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 19:06:20.036 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 19:06:20.069 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 19:06:20.073 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 19:06:23.844 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 19:06:25.905 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 19:06:27.941 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 19:06:27.991 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 19:06:27.991 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 19:07:53.299 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 19:07:55.356 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 19:07:57.388 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 19:07:57.432 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 19:07:57.432 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 19:08:01.174 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 19:08:03.243 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 19:08:05.283 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 19:08:05.314 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 19:08:05.315 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 19:12:47.707 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 19:12:49.755 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 19:12:51.781 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 19:12:51.819 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 19:12:51.819 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[12-11-2024 19:12:55.680 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 1 Screenshot 2024-02-07 104902.png
+[12-11-2024 19:12:57.732 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 1: upload file 2 unnamed.jpg
+[12-11-2024 19:12:59.777 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
+[12-11-2024 19:12:59.831 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
+[12-11-2024 19:12:59.831 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
