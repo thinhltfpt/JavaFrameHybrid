@@ -23,6 +23,9 @@ public class BasePage {
 
     // hàm static này có tác dụng: ko cần khởi tạo đối tượng mà vẫn truy cập vào hàm này được
     // truy cập trực tiếp từ phạm vị class con
+    private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
+    private long longTimeout = GlobalConstants.LONG_TIMEOUT;
+
     public static BasePage getBasePage(){
         return new BasePage();
     }
@@ -309,17 +312,37 @@ public class BasePage {
         }
     }
 
-    public Boolean isElementDisplayed(WebDriver driver, String locator) {
+    public boolean isElementDisplayed(WebDriver driver, String locator) {
         return getWebElement(driver, locator).isDisplayed();
     }
-    public Boolean isElementDisplayed(WebDriver driver, String locator,String... restParmeter) {
+    public boolean isElementDisplayed(WebDriver driver, String locator,String... restParmeter) {
         return getWebElement(driver, castParameter(locator,restParmeter)).isDisplayed();
     }
 
-    public Boolean isElementEnabled(WebDriver driver, String locator) {
+    /* Overide Timeout */
+    public void setImplicitWait(WebDriver driver, long timeout){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
+    }
+    // Element ko co tren UI va ko co trong DOM
+    public boolean isElementUndisplayed(WebDriver driver, String locator){
+        // truoc khi tim element thi set time ngan' thoi
+        setImplicitWait(driver,shortTimeout);
+        List<WebElement> elements = getListWebElement(driver,locator);
+        // tim` xong tra lai mac dinh co cac' step con` lai
+        setImplicitWait(driver,longTimeout);
+        if (elements.size() > 0 && elements.get(0).isDisplayed()){ // element co trong UI va co trong DOM -> false
+            return false;
+        } else if (elements.size() > 0 && !elements.get(0).isDisplayed()){ // Element co' trong DOM va ko hien thi tren UI
+            return true;
+        }else  { // element ko co tren UI va DOM
+            return true;
+        }
+    }
+
+    public boolean isElementEnabled(WebDriver driver, String locator) {
         return getWebElement(driver, locator).isEnabled();
     }
-    public Boolean isElementEnabled(WebDriver driver, String locator,String... restParmeter) {
+    public boolean isElementEnabled(WebDriver driver, String locator,String... restParmeter) {
         return getWebElement(driver, castParameter(locator,restParmeter)).isEnabled();
     }
 
