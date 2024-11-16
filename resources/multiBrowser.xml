@@ -10,8 +10,8 @@
     <test name="run Firefox" preserve-order="true">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="share.cookies.LoginPage"/>
-            <class name="share.cookies.Buy_Moibile"/>
+<!--            <class name="share.cookies.closeBrowser.LoginPage"/>-->
+            <class name="share.cookies.closeBrowser.Buy_Moibile"/>
         </classes>
     </test>
 

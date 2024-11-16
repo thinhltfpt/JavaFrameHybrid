@@ -1,0 +1,3 @@
+[16-11-2024 17:05:45.452 INFO share.cookies.closeBrowser.Buy_Moibile] - OS name = windows 11
+[16-11-2024 17:05:45.454 INFO share.cookies.closeBrowser.Buy_Moibile] - Driver instance name = firefoxdriver: firefox on windows (7f88706b-a0e4-4a30-ac7d-e1bad433795f)
+[16-11-2024 17:05:45.454 INFO share.cookies.closeBrowser.Buy_Moibile] - cmd= taskkill /F /FI 'IMAGENAME eq geckodriver*'

@@ -1,4 +1,4 @@
-package share.cookies;
+package share.cookies.closeBrowser;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -52,7 +52,7 @@ public class LoginPage extends BaseTest {
 
 
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
         //driver.quit();
         closeBrowser();

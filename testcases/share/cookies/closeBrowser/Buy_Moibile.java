@@ -1,4 +1,4 @@
-package share.cookies;
+package share.cookies.closeBrowser;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -30,7 +30,7 @@ public class Buy_Moibile extends BaseTest {
         loginPageObject.setCookies(driver,LoginPage.cookies);
         loginPageObject.sleepInSeconds(5);
         loginPageObject.refeshCurrentPage(driver);
-        myDashboardPO = PageGeneratorManager.getMyDashboardPage(driver);
+//        myDashboardPO = PageGeneratorManager.getMyDashboardPage(driver);
         mobilePageObject = myDashboardPO.clickToMobileLink(driver);
 
     }
@@ -46,8 +46,8 @@ public class Buy_Moibile extends BaseTest {
 
 
 
-    @AfterClass
-    public void afterTest() {
+    @AfterClass(alwaysRun = true)
+    public void afterClass() {
         //driver.quit();
         closeBrowser();
     }

@@ -217,3 +217,26 @@
 [16-11-2024 13:59:42.871 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 3: verify loaded file 1Screenshot 2024-02-07 104902.png
 [16-11-2024 13:59:42.904 INFO com.jquery.upload.Topic_jquery_uploadFile] - ---------------------- Passed -----------------------
 [16-11-2024 13:59:42.904 INFO com.jquery.upload.Topic_jquery_uploadFile] - TC_01_upload_single - Step 4: verify loaded file 2unnamed.jpg
+[16-11-2024 17:00:07.540 INFO share.cookies.closeBrowser.LoginPage] - OS name = windows 11
+[16-11-2024 17:00:07.542 INFO share.cookies.closeBrowser.LoginPage] - Driver instance name = firefoxdriver: firefox on windows (ee8e8b7f-0595-4cbf-91f1-6eaf280e3481)
+[16-11-2024 17:00:07.542 INFO share.cookies.closeBrowser.LoginPage] - cmd= taskkill /F /FI 'IMAGENAME eq geckodriver*'
+[16-11-2024 17:00:07.571 INFO share.cookies.closeBrowser.LoginPage] - Unexpected confirmEx dialog detected. Performed handler "dismiss": 
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [ee8e8b7f-0595-4cbf-91f1-6eaf280e3481, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 132.0.2, moz:accessibilityChecks: false, moz:buildID: 20241110231641, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19668, moz:profile: C:\Users\THINHL~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: ee8e8b7f-0595-4cbf-91f1-6eaf280e3481
+[16-11-2024 17:01:30.549 INFO share.cookies.closeBrowser.LoginPage] - OS name = windows 11
+[16-11-2024 17:01:30.555 INFO share.cookies.closeBrowser.LoginPage] - Driver instance name = firefoxdriver: firefox on windows (5ad30cba-aad7-403b-8df7-d7c74b89b492)
+[16-11-2024 17:01:30.555 INFO share.cookies.closeBrowser.LoginPage] - cmd= taskkill /F /FI 'IMAGENAME eq geckodriver*'
+[16-11-2024 17:01:30.574 INFO share.cookies.closeBrowser.LoginPage] - Unexpected confirmEx dialog detected. Performed handler "dismiss": 
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5ad30cba-aad7-403b-8df7-d7c74b89b492, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 132.0.2, moz:accessibilityChecks: false, moz:buildID: 20241110231641, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17520, moz:profile: C:\Users\THINHL~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 5ad30cba-aad7-403b-8df7-d7c74b89b492
+[16-11-2024 17:05:45.452 INFO share.cookies.closeBrowser.Buy_Moibile] - OS name = windows 11
+[16-11-2024 17:05:45.454 INFO share.cookies.closeBrowser.Buy_Moibile] - Driver instance name = firefoxdriver: firefox on windows (7f88706b-a0e4-4a30-ac7d-e1bad433795f)
+[16-11-2024 17:05:45.454 INFO share.cookies.closeBrowser.Buy_Moibile] - cmd= taskkill /F /FI 'IMAGENAME eq geckodriver*'
