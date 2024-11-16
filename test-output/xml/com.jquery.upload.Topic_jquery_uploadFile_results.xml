@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="run Firefox"
+<testsuite name="run Chrome"
            tests="2"
            failures="2"
            errors="0"
            skipped="0"
-           time="6.051">
+           time="5.475">
   <properties />
-            <testcase name="TC_02_Upload_MultipleFile" time="0.787" classname="com.jquery.upload.Topic_jquery_uploadFile">
+            <testcase name="TC_01_Upload_SingleFile" time="5.289" classname="com.jquery.upload.Topic_jquery_uploadFile">
                 <failure type="java.lang.AssertionError"
-                  message="expected [false] but found [true]"
+                  message="The following asserts failed:
+	not success is on log expected [false] but found [true]"
               >
-<![CDATA[java.lang.AssertionError: expected [false] but found [true]
-  org.testng.Assert.fail(Assert.java:111)
-  org.testng.Assert.failNotEquals(Assert.java:1578)
-  org.testng.Assert.assertFalse(Assert.java:79)
-  org.testng.Assert.assertFalse(Assert.java:89)
-  com.jquery.upload.Topic_jquery_uploadFile.TC_02_Upload_MultipleFile(Topic_jquery_uploadFile.java:61)
+<![CDATA[java.lang.AssertionError: The following asserts failed:
+	not success is on log expected [false] but found [true]
+  org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+  org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+  com.jquery.upload.Topic_jquery_uploadFile.TC_01_Upload_SingleFile(Topic_jquery_uploadFile.java:54)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -47,16 +47,16 @@
       </failure>
 
           </testcase>
-            <testcase name="TC_01_Upload_SingleFile" time="5.264" classname="com.jquery.upload.Topic_jquery_uploadFile">
+            <testcase name="TC_02_Upload_MultipleFile" time="0.186" classname="com.jquery.upload.Topic_jquery_uploadFile">
                 <failure type="java.lang.AssertionError"
-                  message="The following asserts failed:
-	not success is on log expected [false] but found [true]"
+                  message="expected [false] but found [true]"
               >
-<![CDATA[java.lang.AssertionError: The following asserts failed:
-	not success is on log expected [false] but found [true]
-  org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-  org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-  com.jquery.upload.Topic_jquery_uploadFile.TC_01_Upload_SingleFile(Topic_jquery_uploadFile.java:54)
+<![CDATA[java.lang.AssertionError: expected [false] but found [true]
+  org.testng.Assert.fail(Assert.java:111)
+  org.testng.Assert.failNotEquals(Assert.java:1578)
+  org.testng.Assert.assertFalse(Assert.java:79)
+  org.testng.Assert.assertFalse(Assert.java:89)
+  com.jquery.upload.Topic_jquery_uploadFile.TC_02_Upload_MultipleFile(Topic_jquery_uploadFile.java:61)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
