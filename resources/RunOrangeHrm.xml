@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OrangeHrm" >
+
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" />
+
+    <test name="run Firefox" preserve-order="true">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.orangeHrm.pim.Pim_01_Employee"/>
+        </classes>
+    </test>
+
+<!--    <test name="run Chrome">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="com.orangeHrm.pim.Pim_01_Employee"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
+
+

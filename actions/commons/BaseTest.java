@@ -65,7 +65,7 @@ public class BaseTest {
                 throw new RuntimeException("Browser invalid");
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get("https://live.techpanda.org/index.php/");
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         return driver;
     }
 

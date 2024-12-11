@@ -240,3 +240,15 @@ Session ID: 5ad30cba-aad7-403b-8df7-d7c74b89b492
 [16-11-2024 17:05:45.452 INFO share.cookies.closeBrowser.Buy_Moibile] - OS name = windows 11
 [16-11-2024 17:05:45.454 INFO share.cookies.closeBrowser.Buy_Moibile] - Driver instance name = firefoxdriver: firefox on windows (7f88706b-a0e4-4a30-ac7d-e1bad433795f)
 [16-11-2024 17:05:45.454 INFO share.cookies.closeBrowser.Buy_Moibile] - cmd= taskkill /F /FI 'IMAGENAME eq geckodriver*'
+[11-12-2024 14:18:35.992 INFO com.orangeHrm.pim.Pim_01_Employee] - OS name = windows 11
+[11-12-2024 14:18:35.996 INFO com.orangeHrm.pim.Pim_01_Employee] - Driver instance name = firefoxdriver: firefox on windows (656f16d6-acf0-4cb1-bb93-1f25f3cdc637)
+[11-12-2024 14:18:35.996 INFO com.orangeHrm.pim.Pim_01_Employee] - cmd= taskkill /F /FI 'IMAGENAME eq geckodriver*'
+[11-12-2024 14:18:43.281 INFO com.orangeHrm.pim.Pim_01_Employee] - OS name = windows 11
+[11-12-2024 14:18:43.281 INFO com.orangeHrm.pim.Pim_01_Employee] - Driver instance name = chromedriver: chrome on windows (431ee1a3a09b666ad71d2816167d62bd)
+[11-12-2024 14:18:43.282 INFO com.orangeHrm.pim.Pim_01_Employee] - cmd= taskkill /F /FI 'IMAGENAME eq chromedriver*'
+[11-12-2024 14:26:59.393 INFO com.orangeHrm.pim.Pim_01_Employee] - step 1: demo 1
+[11-12-2024 14:26:59.414 INFO com.orangeHrm.pim.Pim_01_Employee] - OS name = windows 11
+[11-12-2024 14:26:59.414 INFO com.orangeHrm.pim.Pim_01_Employee] - Driver instance name = firefoxdriver: firefox on windows (e007f19b-8d4d-4d2d-bd6b-17d2fd6a727e)
+[11-12-2024 14:26:59.414 INFO com.orangeHrm.pim.Pim_01_Employee] - cmd= taskkill /F /FI 'IMAGENAME eq geckodriver*'
+[11-12-2024 15:13:46.736 INFO com.orangeHrm.pim.Pim_01_Employee] - step 1: demo 1
+[11-12-2024 17:29:57.066 INFO com.orangeHrm.pim.Pim_01_Employee] - step 1: demo 1
