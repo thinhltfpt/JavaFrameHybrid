@@ -6,8 +6,11 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -77,11 +80,29 @@ public class BaseTest {
             case FIREFOX:
                 driver = new FirefoxDriver();
                 break;
+            case FIREFOX_HEADLESS:
+                FirefoxOptions ffOptions = new FirefoxOptions();
+                ffOptions.addArguments("--headless");
+                ffOptions.addArguments("window-size=1920x1080");
+                driver = new FirefoxDriver(ffOptions);
+                break;
             case CHROME:
                 driver = new ChromeDriver();
                 break;
+            case CHROME_HEADLESS:
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("window-size=1920x1080");
+                driver = new ChromeDriver(chromeOptions);
+                break;
             case EDGE:
                 driver = new EdgeDriver();
+                break;
+            case EDGE_HEADLESS:
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--headless");
+                edgeOptions.addArguments("window-size=1920x1080");
+                driver = new EdgeDriver(edgeOptions);
                 break;
             default:
                 throw new RuntimeException("Browser invalid");
