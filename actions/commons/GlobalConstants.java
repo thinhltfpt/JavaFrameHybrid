@@ -11,4 +11,5 @@ public class GlobalConstants {
     public static final  long LONG_TIMEOUT = 30;
     public static final String ADMIN_USER_ORANGE = "Admin";
     public static final String ADMIN_PASSWORD_ORANGE = "admin123";
+    public static final String BROWSER_LOG = RELATIVE_PROJECT_PATH + File.separator + "browserLogs" + File.separator;
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OrangeHrmSuite" >
+
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <!-- Khai báo các tham số -->
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" />
+    <parameter name="firstName" value="An"/>
+    <parameter name="lastName" value="Le"/>
+
+    <test name="Run Firefox" preserve-order="true">
+        <!-- Khai báo tham số trình duyệt -->
+        <parameter name="browser" value="firefox" />
+
+        <classes>
+            <!-- Tên đầy đủ của class kiểm thử -->
+            <class name="com.orangeHrm.pim.Pim_01_Employee_manageData"/>
+        </classes>
+    </test>
+
+</suite>

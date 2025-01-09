@@ -9,8 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -78,7 +77,17 @@ public class BaseTest {
 
         switch (browserList) {
             case FIREFOX:
-                driver = new FirefoxDriver();
+                // log to file
+//                FirefoxDriverService ffservice = new GeckoDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "firefoxLog.log")).build();
+
+                // log to console
+//                FirefoxDriverService ffservice = new GeckoDriverService.Builder().withLogOutput(System.out).build();
+
+                // log by level
+                System.setProperty(GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY, GlobalConstants.BROWSER_LOG + "firefoxLevel.log");
+                FirefoxDriverService ffservice = new GeckoDriverService.Builder().withLogLevel(FirefoxDriverLogLevel.DEBUG).build();
+                driver = new FirefoxDriver(ffservice);
+//                driver = new FirefoxDriver();
                 break;
             case FIREFOX_HEADLESS:
                 FirefoxOptions ffOptions = new FirefoxOptions();
