@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/interfaces" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/testcases" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/testdata" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -18,5 +19,6 @@
     <orderEntry type="library" name="log4j-core-2.23.1" level="project" />
     <orderEntry type="library" name="commons-collections-3.2.1" level="project" />
     <orderEntry type="library" name="commons-lang3-3.5" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.15.2" level="project" />
   </component>
 </module>

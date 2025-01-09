@@ -2,6 +2,7 @@ package com.orangeHrm.pim;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
+import jsonData.orangeHRM.UserOrange;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -10,9 +11,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObject.PageGeneratorManager;
 import pageObject.orangeHrm.*;
-import pojoData.UserInfo;
 
-public class Pim_01_Employee_manageData extends BaseTest {
+public class Pim_01_Employee_Json extends BaseTest {
     private WebDriver driver;
     private String browser, employeeID,firstName, lastName;
     private LoginPageObject loginPO;
@@ -20,15 +20,18 @@ public class Pim_01_Employee_manageData extends BaseTest {
     private EmployeeListPageObject employeeListPO;
     private AddEmployeePageObject addEmployeePO;
     private PersonalDetailsPageObject personalDetailsPO;
+    private UserOrange userOrange;
 
-//    private lastName, firstName;
-    @Parameters({"url","browser","firstName","lastName"})
+    @Parameters({"url","browser"})
     @BeforeClass
-    public void beforeClass(String url, String browser,String firstName, String lastName){
+    public void beforeClass(String url, String browser){
         driver = getBrowserDriver(browser,url);
         this.browser = browser;
-        this.firstName = firstName;
-        this.lastName = lastName;
+
+        userOrange = userOrange.getUserOrange("userData.json");
+        firstName = userOrange.getFirstName();
+        lastName =  userOrange.getlastName();
+
 
         loginPO = PageGeneratorManager.getLoginPage(driver);
 
@@ -47,7 +50,6 @@ public class Pim_01_Employee_manageData extends BaseTest {
 
         addEmployeePO.enterToFirstNameTextBox(firstName);
         addEmployeePO.enterToLastNameTextBox(lastName);
-
         employeeID = addEmployeePO.getEmployeeId();
 
         addEmployeePO.clickSaveButton();

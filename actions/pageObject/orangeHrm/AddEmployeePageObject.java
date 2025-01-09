@@ -3,6 +3,7 @@ package pageObject.orangeHrm;
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageUI.orangeHrm.AddEmployeePageUI;
+import pojoData.UserInfo;
 
 public class AddEmployeePageObject extends BaseActions {
      WebDriver driver;
@@ -32,6 +33,10 @@ public class AddEmployeePageObject extends BaseActions {
         clickToElement(driver,AddEmployeePageUI.SAVE_BUTTON);
     }
 
+    public void registerUser(UserInfo userInfo){
+        enterToFirstNameTextBox(userInfo.getFirstName());
+        enterToLastNameTextBox(userInfo.getLastName());
+    }
 
 
 }

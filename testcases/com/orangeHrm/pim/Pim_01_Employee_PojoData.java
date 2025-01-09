@@ -12,7 +12,7 @@ import pageObject.PageGeneratorManager;
 import pageObject.orangeHrm.*;
 import pojoData.UserInfo;
 
-public class Pim_01_Employee_manageData extends BaseTest {
+public class Pim_01_Employee_PojoData extends BaseTest {
     private WebDriver driver;
     private String browser, employeeID,firstName, lastName;
     private LoginPageObject loginPO;
@@ -20,15 +20,20 @@ public class Pim_01_Employee_manageData extends BaseTest {
     private EmployeeListPageObject employeeListPO;
     private AddEmployeePageObject addEmployeePO;
     private PersonalDetailsPageObject personalDetailsPO;
+    private UserInfo userInfo;
 
-//    private lastName, firstName;
-    @Parameters({"url","browser","firstName","lastName"})
+
+    @Parameters({"url","browser"})
     @BeforeClass
-    public void beforeClass(String url, String browser,String firstName, String lastName){
+    public void beforeClass(String url, String browser){
         driver = getBrowserDriver(browser,url);
         this.browser = browser;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        firstName = "An";
+        lastName = "Le";
+
+        userInfo = UserInfo.getUser();
+        userInfo.setFirstName("An");
+        userInfo.setLastName("Le");
 
         loginPO = PageGeneratorManager.getLoginPage(driver);
 
@@ -45,9 +50,9 @@ public class Pim_01_Employee_manageData extends BaseTest {
         log.info("step 1: demo 1");
         addEmployeePO = employeeListPO.clickToAddEmployeeButton();
 
-        addEmployeePO.enterToFirstNameTextBox(firstName);
-        addEmployeePO.enterToLastNameTextBox(lastName);
-
+//        addEmployeePO.enterToFirstNameTextBox(userInfo.getFirstName());
+//        addEmployeePO.enterToLastNameTextBox(userInfo.getLastName());
+        addEmployeePO.registerUser(userInfo);
         employeeID = addEmployeePO.getEmployeeId();
 
         addEmployeePO.clickSaveButton();
@@ -59,16 +64,16 @@ public class Pim_01_Employee_manageData extends BaseTest {
         Assert.assertTrue(personalDetailsPO.isPersonalDetailsHeaderDisplay());
         personalDetailsPO.waitForSpinnerIconInvisible();
 
-        Assert.assertEquals(personalDetailsPO.getFirstNameValue(),firstName);
-        Assert.assertEquals(personalDetailsPO.getLastNameValue(),lastName);
+        Assert.assertEquals(personalDetailsPO.getFirstNameValue(),userInfo.getFirstName());
+        Assert.assertEquals(personalDetailsPO.getLastNameValue(),userInfo.getLastName());
         Assert.assertEquals(personalDetailsPO.getEmployeeIDValue(),employeeID);
 
         employeeListPO = personalDetailsPO.clickToEmployeeListButton();
         employeeListPO.enterEmployeeIDTextbox(employeeID);
         employeeListPO.clickToSearchButton();
         Assert.assertTrue(employeeListPO.isValueDisplayedAtColumnName("Id","1",employeeID));
-        Assert.assertTrue(employeeListPO.isValueDisplayedAtColumnName("First (& Middle) Name","1",firstName));
-        Assert.assertTrue(employeeListPO.isValueDisplayedAtColumnName("Last Name","1",lastName));
+        Assert.assertTrue(employeeListPO.isValueDisplayedAtColumnName("First (& Middle) Name","1", userInfo.getFirstName()));
+        Assert.assertTrue(employeeListPO.isValueDisplayedAtColumnName("Last Name","1", userInfo.getLastName()));
 
     }
 

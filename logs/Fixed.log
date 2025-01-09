@@ -259,3 +259,7 @@ Session ID: 5ad30cba-aad7-403b-8df7-d7c74b89b492
 [31-12-2025 09:47:29.619 INFO com.orangeHrm.pim.Pim_01_Employee] - step 1: demo 1
 [08-01-2025 18:03:06.980 INFO com.orangeHrm.pim.Pim_01_Employee] - step 1: demo 1
 [08-01-2025 18:11:20.353 INFO com.orangeHrm.pim.Pim_01_Employee_manageData] - step 1: demo 1
+[09-01-2025 10:57:16.493 INFO com.orangeHrm.pim.Pim_01_Employee_PojoData] - step 1: demo 1
+[09-01-2025 16:36:38.367 INFO com.orangeHrm.pim.Pim_01_Employee_Json] - step 1: demo 1
+[09-01-2025 16:37:31.550 INFO com.orangeHrm.pim.Pim_01_Employee_Json] - step 1: demo 1
+[09-01-2025 16:38:28.946 INFO com.orangeHrm.pim.Pim_01_Employee_Json] - step 1: demo 1
