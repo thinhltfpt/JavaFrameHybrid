@@ -122,6 +122,73 @@ public class BaseTest {
         return driver;
     }
 
+    protected WebDriver getBrowserEnviromentDriver(String browser, String serverName) {
+        String os = System.getProperty("os.name").toLowerCase();
+        BrowserList browserList = BrowserList.valueOf(browser.toUpperCase());
+
+        switch (browserList) {
+            case FIREFOX:
+                // log to file
+//                FirefoxDriverService ffservice = new GeckoDriverService.Builder().withLogFile(new File(GlobalConstants.BROWSER_LOG + "firefoxLog.log")).build();
+
+                // log to console
+//                FirefoxDriverService ffservice = new GeckoDriverService.Builder().withLogOutput(System.out).build();
+
+                // log by level
+                System.setProperty(GeckoDriverService.GECKO_DRIVER_LOG_PROPERTY, GlobalConstants.BROWSER_LOG + "firefoxLevel.log");
+                FirefoxDriverService ffservice = new GeckoDriverService.Builder().withLogLevel(FirefoxDriverLogLevel.DEBUG).build();
+                driver = new FirefoxDriver(ffservice);
+//                driver = new FirefoxDriver();
+                break;
+            case FIREFOX_HEADLESS:
+                FirefoxOptions ffOptions = new FirefoxOptions();
+                ffOptions.addArguments("--headless");
+                ffOptions.addArguments("window-size=1920x1080");
+                driver = new FirefoxDriver(ffOptions);
+                break;
+            case CHROME:
+                driver = new ChromeDriver();
+                break;
+            case CHROME_HEADLESS:
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless");
+                chromeOptions.addArguments("window-size=1920x1080");
+                driver = new ChromeDriver(chromeOptions);
+                break;
+            case EDGE:
+                driver = new EdgeDriver();
+                break;
+            case EDGE_HEADLESS:
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--headless");
+                edgeOptions.addArguments("window-size=1920x1080");
+                driver = new EdgeDriver(edgeOptions);
+                break;
+            default:
+                throw new RuntimeException("Browser invalid");
+        }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().window().maximize();
+        driver.get(getURLByServer(serverName));
+        return driver;
+    }
+
+    private String getURLByServer(String serverName) {
+        ServerList server = ServerList.valueOf(serverName.toUpperCase());
+        switch (server) {
+            case DEV:
+                serverName = "https://www.google.com/";
+                break;
+            case STAGING:
+                serverName = "https://www.youtube.com/?app=desktop&gl=VN&hl=vi";
+                break;
+            default:
+                throw new IllegalArgumentException("Unexpected value: " + serverName);
+        }
+        return serverName;
+    }
+
+
     protected String GetEmailRandom() {
         Random rand = new Random();
         String email = "letienthinh" + rand.nextInt(8888) + "gmail.com";
