@@ -14,4 +14,5 @@ public class GlobalConstants {
     public static final String BROWSER_LOG = RELATIVE_PROJECT_PATH + File.separator + "browserLogs" + File.separator;
     public static final String RESOURCE_PATH = RELATIVE_PROJECT_PATH + File.separator + "resources" + File.separator;
     public static final String DATA_TEST_PATH = RELATIVE_PROJECT_PATH + File.separator + "dataTest" + File.separator;
+    public static final String ENVIRONMENT_CONFIG_PATH = RELATIVE_PROJECT_PATH + File.separator + "enviromentConfig" + File.separator;
 }

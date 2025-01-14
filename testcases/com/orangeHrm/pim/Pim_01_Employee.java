@@ -71,7 +71,8 @@ public class Pim_01_Employee extends BaseTest {
     }
 
     @Test
-    public void Employee_02_Personal_Details(){}
+    public void Employee_02_Personal_Details(){
+    }
 
     @Test
     public void Employee_03_Contact_Details(){}
