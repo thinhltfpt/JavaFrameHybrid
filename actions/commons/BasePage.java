@@ -186,7 +186,7 @@ public class BasePage {
     public List<WebElement> getListWebElement(WebDriver driver, String locator) {
         return driver.findElements(getByLocator(locator));
     }
-    public List<WebElement> getListWebElement(WebDriver driver, String locator,String restParameter) {
+    public List<WebElement> getListWpebElement(WebDriver driver, String locator,String restParameter) {
         return driver.findElements(getByLocator(castParameter(locator,restParameter)));
     }
 
